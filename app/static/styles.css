@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    font-family: "Open Sans Mixed", "BPG Nino Elite", sans-serif;
+    transition: all .5s linear;
+}
+
+
+body {
+    background-color: rgba(255, 80, 80, 0.2);
+}
+
+
+li {
+    list-style:none;
+}
+
+
+.main {
+    margin: 6% 20%;
+}
+
+
+.task__form {
+    width: 100%;
+}
+
+.task__input {
+    flex: none;
+    justify-content: center;
+    width: 100%;
+    height: 4.5rem;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    border: none;
+    padding: 0 2rem;
+    margin: 0.5rem 0;
+    outline: none;
+    font-size: 1.2rem;
+}
+
+.task__input:first-child {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.task__input:focus-within {
+    box-shadow: inset 1px 2px 6px rgba(2, 12, 47, 0.27)
+}
+
+#task__description {
+    padding: 2rem;
+}
+
+
+#task__radio li {
+    display: inline-block;
+    flex-direction: row;
+    padding: 1.6rem 2rem;
+}
+
+
+#hider, #submit {
+    background-color: #ff5050;
+    color: #FFFFFF;
+    border-radius: 16px;
+    border: none;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    outline: none;
+    height: 3rem;
+    font-size: 1.7rem;
+
+}
+
+
+#hider:hover, #submit:hover {
+    box-shadow: inset -3px -3px 16px rgba(52, 4, 4, 0.22);
+}
+
+
+#hider:active, #submit:active {
+    outline: 0;
+    box-shadow: inset 3px 3px 16px rgba(52, 4, 4, 0.22);
+}
+
+#hider {
+    width: 15%;
+}
+
+#submit {
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.task__item {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 1px 2px 6px rgba(2, 12, 47, 0.27);
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.t1 {
+    background-color: #ef0044;
+}
+
+.t2 {
+    background-color: #c41616;
+}
+
+.t3 {
+    background-color: #6c25e0;
+}
+
+.t4 {
+    background-color: #97e892;
+}
+
+.t5 {
+    background-color: #e4f8d5;
+}
+
+.alert-green, .alert-red, .alert-yellow {
+    box-sizing: border-box;
+    height: 200%;
+    font-size: 1.1rem;
+    text-align: center;
+    padding-top: 0.3rem;
+}
+
+.alert-green {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-red {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}

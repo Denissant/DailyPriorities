@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Tasks </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/bpg-nino-elite-exp-caps.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='fonts/bpg-nino-elite.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link hr    ef="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+    <div class="main">
+
+        <input type="button" id="hider" value="Hide"/>
+
+        {{ form.hidden_tag() }}
+        <form method="POST" class="task__form">
+                {{ form.title(
+                class_='task__input can__hide__input',
+                placeholder='Title') }}
+
+                {{ form.description(
+                class_='task__input can__hide__input',
+                id='task__description',
+                placeholder='Description (Optional)') }}
+
+                {{ form.priority(
+                class_='task__input can__hide__input',
+                id='task__radio') }}
+
+            <span class="can__hide__input"> {{ form.submit }} </span>
+
+        </form>
+
+            {% for t in t1 %}
+                <div class="task__item t1">
+                     {{t.title}}
+                </div>
+                <br>
+            {% endfor %}
+
+
+            {% for t in t2 %}
+                <div class="task__item t2">
+                     {{t.title}}
+                </div>
+                <br>
+            {% endfor %}
+
+            {% for t in t3 %}
+                <div class="task__item t3">
+                     {{t.title}}
+                </div>
+                <br>
+            {% endfor %}
+
+            {% for t in t4 %}
+                <div class="task__item t4">
+                     {{t.title}}
+                </div>
+                <br>
+            {% endfor %}
+
+            {% for t in t5 %}
+                <div class="task__item t5">
+                     {{t.title}}
+                </div>
+                <br>
+            {% endfor %}
+
+    </div>
+<!--    {% with messages = get_flashed_messages(with_categories=true) %}-->
+<!--    {% if messages %}-->
+
+<!--        <ul class="alert alert-dismissible fade show" role="alert" style="position:absolute; top:10px; float:top; width: 100%; height: 45px; text-align: center">-->
+
+<!--        {% for category, message in messages %}-->
+<!--          <li class="{{ category }}">{{ message }}</li>-->
+<!--        {% endfor %}-->
+
+<!--        <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--            <span aria-hidden="true">&times;</span>-->
+<!--        </button>-->
+<!--        </ul>-->
+
+<!--    {% endif %}-->
+<!--    {% endwith %}-->
+
+<script src="{{ url_for('static', filename='scripts.js')}}"></script>
+</body>
+</html>
